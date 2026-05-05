@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurante Sabor Gourmet</title>
+    <meta name="description" content="Página web oficial del Restaurante Sabor Gourmet">
+
+    <!-- Prefetch -->
+    <link rel="prefetch" href="nosotros.html" as="document">
+
+    <!-- Normalize -->
+    <link rel="preload" href="css/normalize.css" as="style">
+    <link rel="stylesheet" href="css/normalize.css">
+
+    <!-- Google Fonts -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap" crossorigin="crossorigin" as="font">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="preload" href="css/style.css" as="style">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+
+<header class="header">
+
+    <div class="contenedor">
+        <div class="barra">
+            <a class="logo" href="index.html">
+                <img src="img/logo.png" alt="Logo Restaurante Gourmet" class="logo__imagen">
+                <h1 class="logo__nombre no-margin centrar-texto">
+                    Restaurante<span class="logo__bold">Gourmet</span>
+                </h1>
+            </a>
+
+            <nav class="navegacion">
+                <a href="nosotros.html" class="navegacion__enlace">Nosotros</a>
+                <a href="menu.html" class="navegacion__enlace">Menú</a>
+                <a href="servicios.html" class="navegacion__enlace">Servicios</a>
+                <a href="contacto.html" class="navegacion__enlace">Contacto</a>
+            </nav>
+        </div>
+    </div>
+
+    <div class="header__texto">
+        <h2 class="no-margin">Experiencias gastronómicas inolvidables</h2>
+        <p class="no-margin">Disfruta sabores únicos preparados por nuestros chefs</p>
+    
+    <a href="contacto.html?mensaje=reservacion" class="boton boton--primario">
+Reservar Mesa
+</a>
+
+    </div>
+
+</header>
+
+
+<div class="contenedor contenido-principal">
+
+    <main class="blog" >
+        <h3>Nuestras Especialidades</h3>
+
+        <article class="entrada" data-aos="zoom-in">
+            <div class="entrada__imagen">
+                <picture>
+                    <source loading="lazy" srcset="img/platillo1.png" type="image/png">
+                    <img loading="lazy" src="img/platillo1.jpg" alt="Platillo gourmet"> 
+                </picture>
+            </div>
+
+            <div class="entrada__contenido" >
+                <h4 class="no-margin">Cortes Finos a la Parrilla</h4>
+                <p>Disfruta nuestros jugosos cortes de carne preparados al punto perfecto, acompañados de guarniciones frescas y salsas especiales de la casa.</p>
+                <a href="menu.html" class="boton boton--primario">Ver Menú</a>
+            </div>
+        </article>
+
+        <article class="entrada" data-aos="zoom-in">
+            <div class="entrada__imagen">
+                <picture>
+                    <source loading="lazy" srcset="img/platillo2.png" type="image/png">
+                    <img loading="lazy" src="img/platillo2.png" alt="Pasta artesanal"> 
+                </picture>
+            </div>
+
+            <div class="entrada__contenido" >
+                <h4 class="no-margin">Pastas</h4>
+                <p>Saborea nuestras pastas hechas en casa con ingredientes frescos y recetas tradicionales que conquistan todos los paladares.</p>
+                <a href="menu.html" class="boton boton--primario">Ver Menú</a>
+            </div>
+        </article>
+
+        <article class="entrada" data-aos="zoom-in">
+            <div class="entrada__imagen" data-aos="zoom-in">
+                <picture>
+                    <source loading="lazy" srcset="img/platillo3.jpg" type="image/jpg">
+                    <img loading="lazy" src="img/platillo3.jpg" alt="Postres especiales"> 
+                </picture>
+            </div>
+
+            <div class="entrada__contenido">
+                <h4 class="no-margin">Variedad de postres</h4>
+                <p>Déjate consentir con nuestros deliciosos postres caseros, elaborados con pasión y el toque dulce perfecto para cerrar tu experiencia.</p>
+                <a href="menu.html" class="boton boton--primario">Ver Menú</a>
+            </div>
+        </article>
+
+    </main>
+
+    <aside class="sidebar">
+        <h3>Servicios del Restaurante</h3>
+
+        <ul class="cursos no-padding">
+            <li class="widget-curso">
+                <h4 class="no-margin">Apertura</h4>
+                <p class="widget-curso__label">Horario: 
+                    <span class="widget-curso__info">12:00 PM - 11:00 PM</span>
+                </p>
+                <p class="widget-curso__label">Capacidad: 
+                    <span class="widget-curso__info">80 personas</span>
+                </p>
+                <p class="widget-curso__label">Estacionamiento: 
+                    <span class="widget-curso__info">Valet parking</span>
+                </p>
+                <a href="contacto.html?mensaje=reservacion" class="boton boton--secundario">
+                    Reservar Mesa
+                </a>
+            </li>
+        </ul>
+    </aside>
+
+</div>
+
+
+<section class="contenedor">
+    <h2 class="centrar-texto">Platillos Destacados</h2>
+
+    <div class="platillos" >
+
+        <div class="platillo" data-aos="zoom-in">
+            <img src="img/cortes/corte11.jpg" alt="Corte Ribeye">
+            <h3>Corte Ribeye</h3>
+            <p>Jugoso corte premium preparado a la parrilla con especias selectas y vegetales asados.</p>
+            <a href="contacto.html?mensaje=reservacion" class="boton boton--secundario">
+                Reservar Mesa
+            </a>
+        </div>
+
+        <div class="platillo" data-aos="zoom-in" data-aos-delay="150">
+            <img src="img/pastas/pasta1.png" alt="Pasta Alfredo">
+            <h3>Pasta Alfredo</h3>
+            <p>Pasta artesanal con salsa cremosa y queso parmesano recién rallado.</p>
+            <a href="contacto.html?mensaje=reservacion" class="boton boton--secundario">
+                Reservar Mesa
+            </a>
+        </div>
+
+        <div class="platillo" data-aos="zoom-in" data-aos-delay="300">
+            <img src="img/postres/postre2.png" alt="Cheesecake">
+            <h3>Cheesecake de Frutos</h3>
+            <p>Postre artesanal con base crujiente y topping de frutos rojos frescos.</p>
+            <a href="contacto.html?mensaje=reservacion" class="boton boton--secundario">
+                Reservar Mesa
+            </a>
+        </div>
+
+    </div>
+</section>
+
+
+<section class="contenedor centrar-texto">
+    <h2>¿Por qué elegirnos?</h2>
+    <p>Trabajamos con ingredientes frescos de alta calidad, chefs especializados y un ambiente elegante diseñado para brindar una experiencia inolvidable.</p>
+</section>
+
+
+<section class="contenedor">
+    <h2 class="centrar-texto">Opiniones de nuestros clientes</h2>
+
+    <div class="testimonios">
+
+        <div class="testimonio" data-aos="zoom-in">
+            <p>⭐⭐⭐⭐⭐</p>
+            <p>"La mejor experiencia gastronómica que he tenido. Sin duda volveré."</p>
+            <strong>- María G.</strong>
+        </div>
+
+        <div class="testimonio" data-aos="zoom-in">
+            <p>⭐⭐⭐⭐⭐</p>
+            <p>"Excelente servicio, ambiente elegante y comida espectacular."</p>
+            <strong>- Carlos R.</strong>
+        </div>
+
+    </div>
+</section>
+
+
+<section class="contenedor centrar-texto">
+    <h2>Ubicación y Horarios</h2>
+    <p>Lunes a Domingo: 10:00 AM - 11:00 PM</p>
+    <h2>Ubicación</h2>
+
+<iframe
+src="https://www.google.com/maps?q=Tultitlán+Estado+de+México&output=embed"
+width="100%"
+height="350"
+style="border:0; border-radius:1rem;"
+loading="lazy">
+</iframe>
+</section>
+
+
+<footer class="footer">
+    <div class="contenedor">
+        <div class="barra">
+
+            <a class="logo" href="index.html">
+                <img src="img/logo.png" alt="Logo Restaurante Gourmet" class="logo__imagen">
+                <h1 class="logo__nombre no-margin centrar-texto">
+                    Restaurante<span class="logo__bold">Gourmet</span>
+                </h1>
+            </a>
+
+            <nav class="navegacion">
+                <a href="nosotros.html" class="navegacion__enlace">Nosotros</a>
+                <a href="menu.html" class="navegacion__enlace">Menú</a>
+                <a href="servicios.html" class="navegacion__enlace">Servicios</a>
+                <a href="contacto.html" class="navegacion__enlace">Contacto</a>
+            </nav>
+
+        </div>
+    </div>
+</footer>
+
+
+<script src="js/modernizr.js"></script>
+
+<!-- AOS -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+AOS.init({
+    duration: 1000,
+    once: false
+});
+</script>
+
+<a href="https://wa.me/521?" class="whatsapp-float" target="_blank">
+    <img src="img/extras/whatsapplogo.png" alt="WhatsApp">
+</a>
+
+</body>
+</html>

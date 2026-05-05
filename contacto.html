@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | Restaurante Gourmet</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="header">
+
+        <div class="contenedor">
+            <div class="barra">
+                <a class="logo" href="index.html">
+                     <img src="img/logo.png" alt="Logo Restaurante Gourmet" class="logo__imagen">
+                    <h1 class="logo__nombre no-margin centrar-texto">
+                        Restaurante<span class="logo__bold">Gourmet</span>
+                    </h1>
+                </a>
+
+                <nav class="navegacion">
+                    <a href="nosotros.html" class="navegacion__enlace">Nosotros</a>
+                    <a href="menu.html" class="navegacion__enlace">Menú</a>
+                      <a href="servicios.html" class="navegacion__enlace">Servicios</a>
+                    <a href="contacto.html" class="navegacion__enlace activo">Contacto</a>
+                </nav>
+            </div>
+        </div>
+
+        <div class="header__texto">
+            <h2 class="no-margin">Reserva tu experiencia gastronómica</h2>
+            <p class="no-margin">Estamos listos para atenderte</p>
+        </div>
+    </header>
+
+<section class="contenedor info-contacto">
+
+<div class="platillos">
+
+<div class="platillo">
+<h3>📍 Dirección</h3>
+<p>Tultitlan, Estado de México</p>
+</div>
+
+<div class="platillo">
+<h3>📞 Teléfono</h3>
+<p>+52 1344535353</p>
+</div>
+
+<div class="platillo">
+<h3>⏰ Horario</h3>
+<p>Lunes a Domingo<br>10:00 AM - 11:00 PM</p>
+</div>
+
+</div>
+
+</section>
+
+    <main class="contenedor">
+        <h3 class="centrar-texto">Contacto y Reservaciones</h3>
+
+        <div class="contacto-bg"></div>
+
+        <form class="formulario">
+            <div class="campo">
+                <label class="campo__label" for="nombre">Nombre</label>
+                <input 
+                    class="campo__field"
+                    type="text" 
+                    placeholder="Tu Nombre Completo" 
+                    id="nombre"
+                >
+            </div>
+            <div class="campo">
+                <label class="campo__label" for="email">E-mail</label>
+                <input 
+                    class="campo__field"
+                    type="email" 
+                    placeholder="Tu Correo Electrónico" 
+                    id="email"
+                >
+            </div>
+            <div class="campo">
+                <label class="campo__label" for="mensaje">Mensaje o Reservación</label>
+                <textarea 
+                    class="campo__field campo__field--textarea"
+                    id="mensaje"
+                ></textarea>
+            </div>
+
+            <div class="campo">
+                <input type="submit" value="Enviar por WhatsApp" class="boton boton--primario">
+            </div>
+        </form>
+    </main>
+<section class="contenedor">
+<h3 class="centrar-texto">Nuestra ubicación</h3>
+
+<iframe
+src="https://www.google.com/maps?q=Tultitlán+Estado+de+México&output=embed"
+width="100%"
+height="350"
+style="border:0; border-radius:10px;"
+loading="lazy">
+</iframe>
+
+</section>
+
+    <footer class="footer">
+        <div class="contenedor">
+            <div class="barra">
+                <a class="logo" href="index.html">
+                     <img src="img/logo.png" alt="Logo Restaurante Gourmet" class="logo__imagen">
+                    <h1 class="logo__nombre no-margin centrar-texto">
+                        Restaurante<span class="logo__bold">Gourmet</span>
+                    </h1>
+                </a>
+
+                <nav class="navegacion">
+                    <a href="nosotros.html" class="navegacion__enlace">Nosotros</a>
+                    <a href="menu.html" class="navegacion__enlace">Menú</a>
+                     <a href="servicios.html" class="navegacion__enlace">Servicios</a>
+                    <a href="contacto.html" class="navegacion__enlace activo">Contacto</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/modernizr.js"></script>
+    
+<script>
+    const formulario = document.querySelector('.formulario');
+
+    formulario.addEventListener('submit', function(e) {
+        e.preventDefault(); // para que no se recargue la pagina y se pierda el mensaje
+
+        // toma los valores
+        const nombre = document.getElementById('nombre').value;
+        const email = document.getElementById('email').value;
+        const mensaje = document.getElementById('mensaje').value;
+
+        // copia el mensaje a enviar
+        const texto = `%0A%0ANombre: ${nombre}%0AEmail: ${email}%0A%0AMensaje:%0A${mensaje}`;
+
+        // numero al cual se enviara el mensaje 
+        const numero = "521"; // para que funcione agregar 521 antes del numero
+
+        // link a whatsapp
+        const url = `https://wa.me/${numero}?text=${texto}`;
+
+        window.open(url, '_blank');
+    });
+</script>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+const mensaje = params.get("mensaje");
+const campoMensaje = document.getElementById("mensaje");
+
+if (mensaje === "reservacion") {
+    campoMensaje.value =
+        "Quiero reservar una mesa para:\n\nDía:\n\nHorario:\n\nNúmero de personas:";
+}
+
+if (mensaje === "cumpleanos") {
+    campoMensaje.value =
+        "Hola, quiero reservar para un cumpleaños.\n\nFecha:\n\nHora:\n\nNúmero de personas:";
+}
+
+if (mensaje === "reunion") {
+    campoMensaje.value =
+        "Hola, quiero reservar para una reunión.\n\nFecha:\n\nHora:\n\nNúmero de personas:";
+}
+
+if (mensaje === "graduacion") {
+    campoMensaje.value =
+        "Hola, quiero reservar para una graduación.\n\nFecha:\n\nHora:\n\nNúmero de personas:";
+}
+</script>
+
+
+</body>
+</html>
